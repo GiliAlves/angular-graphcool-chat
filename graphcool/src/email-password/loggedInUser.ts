@@ -15,7 +15,7 @@ export default async (event: FunctionEvent<{}>) => {
     }
 
     const userId = event.context.auth.nodeId;
-    const graphcool: Graphcool = fromEvent(event);
+    const graphcool: Graphcool = fromEvent<{}>(event);
     const api: GraphQLClient = graphcool.api('simple/v1');
 
     // get user by id
